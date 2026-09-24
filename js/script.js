@@ -180,66 +180,78 @@ document.addEventListener('DOMContentLoaded', () => {
             
             startSway();
 
-            if (!isMobile) {
-                // Dragging mechanics for Lanyard
-                lanyard.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    if(swayAnimation) swayAnimation.kill();
-                    lanyard.style.cursor = 'grabbing';
-                    document.body.style.userSelect = 'none'; // prevent text selection while dragging
-                });
+            // Dragging mechanics for Lanyard (Mouse + Touch)
+            let pivotX, pivotY;
 
-                window.addEventListener('mousemove', (e) => {
-                    if (!isDragging) {
-                        // Subtle parallax if not dragging
-                        const heroSection = document.getElementById('home');
-                        const rect = heroSection.getBoundingClientRect();
-                        const x = e.clientX - rect.left - (rect.width/2);
-                        // We don't overwrite rotation here to avoid fighting with swayAnimation, 
-                        // instead we can just let it sway. Or we use a wrapper for parallax.
-                        // For simplicity, we just use the drag interaction now.
-                        return;
-                    }
-                    
-                    // Calculate physics-based rotation based on mouse position relative to pivot
-                    const wrapperRect = lanyardWrapper.getBoundingClientRect();
-                    const pivotX = wrapperRect.left + (wrapperRect.width / 2);
-                    const pivotY = wrapperRect.top;
-                    
-                    const dx = e.clientX - pivotX;
-                    const dy = e.clientY - pivotY;
-                    
-                    let angle = Math.atan2(dx, dy) * (180 / Math.PI);
-                    
-                    // Limit rotation angle so it doesn't flip completely
-                    if (angle > 75) angle = 75;
-                    if (angle < -75) angle = -75;
-                    
-                    gsap.set(lanyard, {
-                        rotation: -angle,
-                        transformOrigin: "top center"
-                    });
-                });
-
-                window.addEventListener('mouseup', () => {
-                    if (isDragging) {
-                        isDragging = false;
-                        lanyard.style.cursor = 'grab';
-                        document.body.style.userSelect = '';
-                        
-                        // Elastic release effect (swing back to center then resume swaying)
-                        gsap.to(lanyard, {
-                            rotation: 0,
-                            duration: 2.5,
-                            ease: "elastic.out(1, 0.3)",
-                            onComplete: startSway
-                        });
-                    }
-                });
+            function dragStart(e) {
+                isDragging = true;
+                if(swayAnimation) swayAnimation.kill();
+                lanyard.style.cursor = 'grabbing';
+                document.body.style.userSelect = 'none'; // prevent text selection while dragging
                 
-                // Initial cursor
-                lanyard.style.cursor = 'grab';
+                // Get pivot coords
+                const wrapperRect = lanyardWrapper.getBoundingClientRect();
+                pivotX = wrapperRect.left + (wrapperRect.width / 2);
+                pivotY = wrapperRect.top;
             }
+
+            function dragMove(e) {
+                if (!isDragging) {
+                    if (!isMobile && e.type === 'mousemove') {
+                        // Optional parallax if we want, but skipped for performance
+                    }
+                    return;
+                }
+                
+                // If touching, prevent scrolling while dragging lanyard
+                if (e.type === 'touchmove') e.preventDefault();
+                
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                
+                const dx = clientX - pivotX;
+                const dy = clientY - pivotY;
+                
+                let angle = Math.atan2(dx, dy) * (180 / Math.PI);
+                
+                // Limit rotation angle so it doesn't flip completely
+                if (angle > 75) angle = 75;
+                if (angle < -75) angle = -75;
+                
+                gsap.set(lanyard, {
+                    rotation: -angle,
+                    transformOrigin: "top center"
+                });
+            }
+
+            function dragEnd(e) {
+                if (isDragging) {
+                    isDragging = false;
+                    lanyard.style.cursor = 'grab';
+                    document.body.style.userSelect = '';
+                    
+                    // Elastic release effect
+                    gsap.to(lanyard, {
+                        rotation: 0,
+                        duration: 2.5,
+                        ease: "elastic.out(1, 0.3)",
+                        onComplete: startSway
+                    });
+                }
+            }
+
+            // Bind Mouse Events
+            lanyard.addEventListener('mousedown', dragStart);
+            window.addEventListener('mousemove', dragMove, { passive: false });
+            window.addEventListener('mouseup', dragEnd);
+            
+            // Bind Touch Events
+            lanyard.addEventListener('touchstart', dragStart, { passive: true });
+            window.addEventListener('touchmove', dragMove, { passive: false });
+            window.addEventListener('touchend', dragEnd);
+            
+            // Initial cursor
+            lanyard.style.cursor = 'grab';
 
             // Scroll animations setup
             setupScrollAnimations();
