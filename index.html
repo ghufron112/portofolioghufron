@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOH. ALI GHUFRON | Informatics Engineering Student</title>
+    <meta name="description" content="Portfolio personal MOH. ALI GHUFRON, mahasiswa Teknik Informatika yang memiliki minat pada web development, mobile development, UI/UX design, dan teknologi digital.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MOH. ALI GHUFRON | Informatics Engineering Student">
+    <meta property="og:description" content="Portfolio personal MOH. ALI GHUFRON, mahasiswa Teknik Informatika yang memiliki minat pada web development, mobile development, UI/UX design, dan teknologi digital.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <h1 class="loader-text">MOH. ALI GHUFRON</h1>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+            <span class="loader-percentage">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-text">VIEW</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">MOH. ALI GHUFRON.</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="files/CV-Moh-Ali-Ghufron.jpg" class="btn btn-outline nav-btn" download>Download CV</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="small-text slide-up">HELLO, I'M</p>
+                <h1 class="big-heading slide-up">MOH. ALI <br> GHUFRON.</h1>
+                <div class="typing-container slide-up">
+                    <span class="typing-text"></span><span class="cursor">|</span>
+                </div>
+                <p class="hero-desc slide-up">Saya membangun website, aplikasi mobile, dan pengalaman digital yang menggabungkan teknologi dengan desain yang menarik.</p>
+                <div class="hero-buttons slide-up">
+                    <a href="#projects" class="btn btn-primary cursor-hover">VIEW MY WORK <i class="fas fa-arrow-right"></i></a>
+                    <a href="files/CV-Moh-Ali-Ghufron.jpg" class="btn btn-secondary cursor-hover" download>DOWNLOAD CV</a>
+                </div>
+                <div class="social-links slide-up">
+                    <a href="https://github.com" target="_blank" class="cursor-hover" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="cursor-hover" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="cursor-hover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/" target="_blank" class="cursor-hover" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-visual fade-in">
+                <div class="lanyard-wrapper">
+                    <div class="lanyard-container" id="lanyard">
+                        <svg class="lanyard-string-svg" width="160" height="250" viewBox="0 0 160 250">
+                            <!-- Left strap -->
+                            <line x1="0" y1="-100" x2="65" y2="190" stroke="#4F7DFD" stroke-width="14" />
+                            <!-- Right strap -->
+                            <line x1="160" y1="-100" x2="95" y2="190" stroke="#4F7DFD" stroke-width="14" />
+                            <!-- Metal clip -->
+                            <rect x="60" y="180" width="40" height="35" rx="5" fill="#E2E8F0" />
+                            <circle cx="80" cy="210" r="7" fill="#94A3B8" />
+                            <rect x="73" y="215" width="14" height="30" fill="#E2E8F0" rx="3" />
+                        </svg>
+                        
+                        <div class="id-card cursor-hover">
+                            <div class="card-hole"></div>
+                            <div class="card-header">
+                                <span class="badge">STUDENT</span>
+                            </div>
+                            <div class="card-photo">
+                                <img src="images/profile.png" alt="MOH. ALI GHUFRON" onerror="this.src='https://via.placeholder.com/120x120/0B1120/4F7DFD?text=MAG'">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">MOH. ALI<br>GHUFRON</h3>
+                                <p class="card-role">INFORMATICS<br>ENGINEERING</p>
+                                <div class="card-barcode">
+                                    <div class="bar w-2"></div>
+                                    <div class="bar w-4"></div>
+                                    <div class="bar w-1"></div>
+                                    <div class="bar w-3"></div>
+                                    <div class="bar w-2"></div>
+                                    <div class="bar w-1"></div>
+                                    <div class="bar w-4"></div>
+                                    <div class="bar w-2"></div>
+                                    <div class="bar w-3"></div>
+                                    <div class="bar w-1"></div>
+                                    <div class="bar w-4"></div>
+                                    <div class="bar w-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator cursor-hover" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <span>SCROLL TO EXPLORE</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ABOUT ME</h2>
+                <p class="section-subtitle">"Turning ideas into digital experiences."</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image reveal-left">
+                    <div class="image-wrapper">
+                        <img src="images/profile.png" alt="MOH. ALI GHUFRON" onerror="this.src='https://via.placeholder.com/400x500/08111F/4F7DFD?text=Profile+Image'">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                
+                <div class="about-text reveal-right">
+                    <p class="mb-4">Halo, saya <strong>MOH. ALI GHUFRON</strong>, mahasiswa S1 Teknik Informatika yang tertarik pada dunia teknologi, desain, dan pengembangan produk digital.</p>
+                    <p class="mb-4">Saya memiliki ketertarikan dalam membangun website, aplikasi mobile menggunakan Flutter, serta merancang interface yang modern dan mudah digunakan.</p>
+                    <p class="mb-6">Saya terus belajar dan mengembangkan kemampuan melalui berbagai project digital.</p>
+                    
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Education</span>
+                            <span class="info-value">S1 Teknik Informatika</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Focus</span>
+                            <span class="info-value">Web • Mobile • UI/UX</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Indonesia</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status</span>
+                            <span class="info-value">Student / Open to Collab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-container reveal-up">
+                <div class="stat-item">
+                    <h3 class="stat-num"><span class="counter" data-target="5">0</span>+</h3>
+                    <p class="stat-label">Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-num"><span class="counter" data-target="4">0</span>+</h3>
+                    <p class="stat-label">Technologies</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-num"><span class="counter" data-target="1">0</span>+</h3>
+                    <p class="stat-label">Years Learning</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-num">∞</h3>
+                    <p class="stat-label">Curiosity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>WEB DEVELOPMENT ✦ UI/UX DESIGN ✦ MOBILE APP ✦ CREATIVE DIGITAL ✦ WEB DEVELOPMENT ✦ UI/UX DESIGN ✦ MOBILE APP ✦ CREATIVE DIGITAL ✦</span>
+            <span>WEB DEVELOPMENT ✦ UI/UX DESIGN ✦ MOBILE APP ✦ CREATIVE DIGITAL ✦ WEB DEVELOPMENT ✦ UI/UX DESIGN ✦ MOBILE APP ✦ CREATIVE DIGITAL ✦</span>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">MY SKILLS</h2>
+                <p class="section-subtitle">"Tools & technologies I use to bring ideas to life."</p>
+            </div>
+            
+            <div class="skills-wrapper">
+                <div class="skill-category reveal-up">
+                    <h3 class="category-title">DEVELOPMENT</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <span class="skill-name">CSS</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-js skill-icon"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-code skill-icon"></i>
+                            <span class="skill-name">Dart</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-mobile-screen-button skill-icon"></i>
+                            <span class="skill-name">Flutter</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-git-alt skill-icon"></i>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-github skill-icon"></i>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal-up delay-1">
+                    <h3 class="category-title">DESIGN</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card cursor-hover">
+                            <i class="fab fa-figma skill-icon"></i>
+                            <span class="skill-name">Figma</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-pen-nib skill-icon"></i>
+                            <span class="skill-name">UI/UX Design</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-vector-square skill-icon"></i>
+                            <span class="skill-name">Graphic Design</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-image skill-icon"></i>
+                            <span class="skill-name">Photo Editing</span>
+                        </div>
+                        <div class="skill-card cursor-hover">
+                            <i class="fas fa-video skill-icon"></i>
+                            <span class="skill-name">Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SELECTED WORK</h2>
+                <p class="section-subtitle">"Some projects I've built and designed."</p>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Project 01: Featured -->
+                <div class="project-card featured-project reveal-up project-hover" data-id="1">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/kopi-madu.png" alt="Kopi Madu Pakedy" class="project-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=Kopi+Madu+Pakedy'">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-number">01 / 05</span>
+                            <span class="project-category">WEBSITE / UMKM / COFFEE SHOP</span>
+                        </div>
+                        <h3 class="project-title">KOPI MADU PAKEDY</h3>
+                        <p class="project-short-desc">Website digital untuk Kopi Madu Pakedy yang dirancang untuk memperkenalkan brand, produk, menu, dan informasi bisnis melalui tampilan website yang modern, responsive, dan mudah digunakan.</p>
+                        <div class="project-tech">
+                            <span>HTML</span> • <span>CSS</span> • <span>JavaScript</span>
+                        </div>
+                        <div class="project-btn-group">
+                            <a href="https://kopimadupakedi.vercel.app/" target="_blank" class="btn btn-primary btn-sm direct-link-btn" aria-label="Live Website">LIVE WEBSITE <i class="fas fa-external-link-alt"></i></a>
+                            <!-- Placeholder for GitHub -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 02 -->
+                    <div class="project-card regular-project reveal-up project-hover" data-id="2">
+                        <div class="project-image-wrapper">
+                            <img src="images/projects/atani.png" alt="ATANI" class="project-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=ATANI+Marketplace'">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-number">02 / 05</span>
+                                <span class="project-category">MOBILE APP / MARKETPLACE</span>
+                            </div>
+                            <h3 class="project-title">ATANI</h3>
+                            <div class="project-tech">
+                                <span>Flutter</span> • <span>Dart</span> • <span>Firebase</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm view-project-btn" aria-label="View Project">VIEW PROJECT <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 03 -->
+                    <div class="project-card regular-project reveal-up project-hover" data-id="3">
+                        <div class="project-image-wrapper">
+                            <img src="images/projects/ag-movie.png" alt="AG Movie" class="project-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=AG+Movie'">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-number">03 / 05</span>
+                                <span class="project-category">MOBILE APPLICATION</span>
+                            </div>
+                            <h3 class="project-title">AG MOVIE</h3>
+                            <div class="project-tech">
+                                <span>Flutter</span> • <span>Dart</span> • <span>TMDb API</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm view-project-btn" aria-label="View Project">VIEW PROJECT <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="project-card regular-project reveal-up project-hover" data-id="4">
+                        <div class="project-image-wrapper">
+                            <img src="images/projects/noteeasy.png" alt="NoteEasy" class="project-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=NoteEasy'">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-number">04 / 05</span>
+                                <span class="project-category">MOBILE APPLICATION</span>
+                            </div>
+                            <h3 class="project-title">NOTEEASY</h3>
+                            <div class="project-tech">
+                                <span>Flutter</span> • <span>Dart</span> • <span>SharedPreferences</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm view-project-btn" aria-label="View Project">VIEW PROJECT <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Project 05 -->
+                    <div class="project-card regular-project reveal-up project-hover" data-id="5">
+                        <div class="project-image-wrapper">
+                            <img src="images/projects/school-website.png" alt="School Profile Website" class="project-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=School+Website'">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-number">05 / 05</span>
+                                <span class="project-category">WEBSITE DEVELOPMENT</span>
+                            </div>
+                            <h3 class="project-title">SCHOOL PROFILE WEBSITE</h3>
+                            <div class="project-tech">
+                                <span>HTML</span> • <span>CSS</span> • <span>JS</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm view-project-btn" aria-label="View Project">VIEW PROJECT <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Data -->
+    <div id="project-data" style="display:none;">
+        <div data-id="1">
+            <div class="d-category">Website / UMKM / Coffee Shop</div>
+            <div class="d-title">KOPI MADU PAKEDY</div>
+            <div class="d-image">images/projects/kopi-madu.png</div>
+            <div class="d-desc">Website digital untuk Kopi Madu Pakedy yang dirancang untuk memperkenalkan brand, produk, menu, dan informasi bisnis melalui tampilan website yang modern, responsive, dan mudah digunakan.</div>
+            <div class="d-tech">HTML, CSS, JavaScript</div>
+            <div class="d-features">Modern Landing Page, Product Showcase, Menu Category, Best Seller, WhatsApp Ordering, Contact, Responsive Design</div>
+            <div class="d-link">https://kopimadupakedi.vercel.app/</div>
+            <div class="d-btn-text">VISIT WEBSITE</div>
+        </div>
+        <div data-id="2">
+            <div class="d-category">Marketplace Hasil Pertanian Lokal</div>
+            <div class="d-title">ATANI</div>
+            <div class="d-image">images/projects/atani.png</div>
+            <div class="d-desc">ATANI merupakan konsep aplikasi marketplace hasil pertanian lokal yang mempertemukan petani dengan pembeli dalam satu platform digital.</div>
+            <div class="d-tech">Flutter, Dart, Firebase</div>
+            <div class="d-features">Product Marketplace, Product Category, Product Detail, Farmer / Seller Concept</div>
+            <div class="d-link">#</div>
+            <div class="d-btn-text">PROJECT UNAVAILABLE</div>
+        </div>
+        <div data-id="3">
+            <div class="d-category">Movie Streaming Mobile Application</div>
+            <div class="d-title">AG MOVIE</div>
+            <div class="d-image">images/projects/ag-movie.png</div>
+            <div class="d-desc">AG Movie merupakan aplikasi mobile bertema streaming film dengan fitur pencarian, detail film, trailer, favorite, profile, dan integrasi API film.</div>
+            <div class="d-tech">Flutter, Dart, TMDb API, SharedPreferences</div>
+            <div class="d-features">Movie Search, Movie Detail, Trailer, Favorite, Profile, TMDb API</div>
+            <div class="d-link">#</div>
+            <div class="d-btn-text">PROJECT UNAVAILABLE</div>
+        </div>
+        <div data-id="4">
+            <div class="d-category">Simple Notes Application</div>
+            <div class="d-title">NOTEEASY</div>
+            <div class="d-image">images/projects/noteeasy.png</div>
+            <div class="d-desc">NoteEasy merupakan aplikasi catatan sederhana yang membantu pengguna membuat, menyimpan, mencari, dan mengelola catatan secara praktis.</div>
+            <div class="d-tech">Flutter, Dart, SharedPreferences</div>
+            <div class="d-features">Create Note, Edit Note, Delete Note, Search, Local Storage</div>
+            <div class="d-link">#</div>
+            <div class="d-btn-text">PROJECT UNAVAILABLE</div>
+        </div>
+        <div data-id="5">
+            <div class="d-category">School Profile & PPDB Website</div>
+            <div class="d-title">SCHOOL PROFILE WEBSITE</div>
+            <div class="d-image">images/projects/school-website.png</div>
+            <div class="d-desc">Website sekolah modern dengan identitas pendidikan yang profesional, bersih, informatif, dan responsive. Memuat profil sekolah, program keahlian, fasilitas, hingga PPDB.</div>
+            <div class="d-tech">HTML, CSS, JavaScript, Google Apps Script</div>
+            <div class="d-features">School Profile, Principal Welcome, Multimedia Program, Facilities, PPDB, News, Gallery, Contact, Google Maps</div>
+            <div class="d-link">#</div>
+            <div class="d-btn-text">PROJECT UNAVAILABLE</div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-container">
+            <button class="modal-close cursor-hover" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="" alt="Project Image" id="m-img" onerror="this.src='https://via.placeholder.com/800x600/08111F/4F7DFD?text=Project'">
+                </div>
+                <div class="modal-details">
+                    <span class="m-category" id="m-category">Category</span>
+                    <h3 class="m-title" id="m-title">Project Title</h3>
+                    
+                    <div class="m-section">
+                        <h4>Description</h4>
+                        <p id="m-desc">Project description goes here.</p>
+                    </div>
+                    
+                    <div class="m-section">
+                        <h4>Technologies</h4>
+                        <p id="m-tech">Tech1, Tech2</p>
+                    </div>
+                    
+                    <div class="m-section">
+                        <h4>Features</h4>
+                        <ul id="m-features" class="m-features-list">
+                            <!-- features injected here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="m-actions">
+                        <a href="#" target="_blank" class="btn btn-primary cursor-hover" id="m-link">VISIT WEBSITE <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services / What I Do -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">WHAT I DO</h2>
+                <p class="section-subtitle">"Layanan dan keahlian yang saya tawarkan."</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card reveal-up cursor-hover">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">WEB DEVELOPMENT</h3>
+                    <p class="service-desc">Membangun website modern, responsive, dan mudah digunakan.</p>
+                </div>
+                <div class="service-card reveal-up delay-1 cursor-hover">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">MOBILE DEVELOPMENT</h3>
+                    <p class="service-desc">Mengembangkan aplikasi mobile menggunakan Flutter.</p>
+                </div>
+                <div class="service-card reveal-up delay-2 cursor-hover">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">UI/UX DESIGN</h3>
+                    <p class="service-desc">Merancang interface yang modern dan user friendly.</p>
+                </div>
+                <div class="service-card reveal-up delay-3 cursor-hover">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">CREATIVE DESIGN</h3>
+                    <p class="service-desc">Visual design, photo editing, dan digital content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">EDUCATION</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sekarang</span>
+                        <h3 class="timeline-title">S1 TEKNIK INFORMATIKA</h3>
+                        <p class="timeline-status">Mahasiswa</p>
+                    </div>
+                </div>
+                <!-- Additional timeline items can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">CERTIFICATES</h2>
+            </div>
+            
+            <div class="cert-grid">
+                <!-- Example Certificate (Placeholder) -->
+                <div class="cert-card reveal-up cursor-hover">
+                    <img src="images/certificates/cert-placeholder.png" alt="Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/600x400/08111F/4F7DFD?text=Certificate'">
+                    <div class="cert-overlay">
+                        <h3 class="cert-title">Web Development Course</h3>
+                        <p class="cert-year">2025</p>
+                        <span class="cert-view">VIEW CERTIFICATE</span>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up delay-1 cursor-hover">
+                    <img src="images/certificates/cert-placeholder.png" alt="Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/600x400/08111F/4F7DFD?text=Certificate'">
+                    <div class="cert-overlay">
+                        <h3 class="cert-title">Flutter Bootcamp</h3>
+                        <p class="cert-year">2024</p>
+                        <span class="cert-view">VIEW CERTIFICATE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Image Modal for Certificates -->
+    <div class="image-modal-overlay" id="image-modal">
+        <button class="modal-close cursor-hover" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <img src="" alt="Fullscreen Certificate" id="fullscreen-img">
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-text reveal-left">
+                    <h2 class="contact-heading">LET'S CREATE<br>SOMETHING<br><span class="text-accent">GREAT.</span></h2>
+                    <p class="contact-desc">Punya ide project atau ingin berkolaborasi?<br>Jangan ragu untuk menghubungi saya.</p>
+                    
+                    <div class="contact-socials">
+                        <a href="mailto:example@email.com" class="contact-link cursor-hover"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="https://wa.me/" class="contact-link cursor-hover"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://instagram.com" class="contact-link cursor-hover"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://github.com" class="contact-link cursor-hover"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com" class="contact-link cursor-hover"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container reveal-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Message" rows="5" required class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block cursor-hover">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
+                        
+                        <div class="form-notification" id="form-notif">Message sent successfully!</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">MOH. ALI GHUFRON.</a>
+                    <p class="footer-tagline">"Designing ideas. Building experiences."</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home" class="cursor-hover">Home</a>
+                    <a href="#about" class="cursor-hover">About</a>
+                    <a href="#projects" class="cursor-hover">Projects</a>
+                    <a href="#contact" class="cursor-hover">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="cursor-hover"><i class="fab fa-github"></i></a>
+                    <a href="#" class="cursor-hover"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="cursor-hover"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 MOH. ALI GHUFRON. ALL RIGHTS RESERVED.</p>
+                <a href="#home" class="back-to-top cursor-hover">Back to Top <i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
